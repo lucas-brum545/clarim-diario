@@ -1,0 +1,16 @@
+:root{
+    --tinta: #111111;
+    --papel: #f4f7ec;
+    --urgente: #b3001b;
+    --cinza-legenda: #5d5a52;
+    --raio: 8px;
+    --fonte-manchete: Georgia, 'Times New Roman', serif;
+    --fonte-ui: Arial, Helvetica, sans-serif;
+}
+
+[data-theme='dark'] {
+    --tinta: #e8e4d8;
+    --papel: #191817;
+    --urgente:#ff5468;
+    --cinza-legenda:#a5a196;
+}

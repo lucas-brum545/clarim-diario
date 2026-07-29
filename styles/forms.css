@@ -1,0 +1,81 @@
+.auth { 
+    display: flex; 
+    justify-content: center; 
+    padding: 10px 0;
+}
+
+.formulario {
+    border: 0.5px solid var(--tinta);
+    background-color: var(--cor-card);
+    padding: 32px;
+    width: 100%;
+    max-width: 440px;
+}
+
+.formulario label {
+    font-family: var(--fonte-ui);
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--cinza-legenda);
+    margin: 16px 0 4px;
+}
+
+.formulario h1{
+    text-align: left;
+    border-bottom: 3px double var(--tinta);
+}
+
+.formulario input {
+    border: 1px solid black;
+    width: 100%;
+    font-family: var(--fonte-ui);
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid var(--tinta);
+    color: var(--tinta);
+    background: transparent;
+}
+
+.formulario input:focus {
+    outline: none;
+    border-color: var(--urgente);
+}
+
+.linha {
+    display: flex;
+    gap: 12px;
+}
+
+.campo-largo {
+    flex: 1;
+}
+
+.campo-curto {
+    width: 90px;
+}
+
+.formulario .btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: var(--urgente);
+    cursor: pointer;
+}
+
+.rodape-form{
+    text-align: center;
+    font-family: var(--fonte-ui);
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.aviso{
+    color: var(--urgente);
+}

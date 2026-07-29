@@ -1,0 +1,32 @@
+.rodape { grid-area: rodape;}
+.rodape{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    border-top: 4px double var(--tinta);
+    color: var(--tinta);
+    padding: 20px;
+    padding-left: 150px;
+    font-size: 14px;
+    text-decoration: none;
+    & ul{
+        list-style-type:none;
+        text-decoration: none;
+    }
+    & a{
+        display: block;
+        color: var(--tinta);
+        text-decoration: none;
+        margin-bottom: 6px;
+    }
+    & a:hover{
+        text-decoration: underline;
+    }
+}
+
+.coluna{
+    display: block;
+    justify-content: center;
+    unicode-bidi: isolate;
+}
