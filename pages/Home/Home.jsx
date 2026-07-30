@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import NewsCard from '../../components/NewsCard/NewsCard'
-import { listarNoticias } from '../../services/noticias'
+// import { listarNoticias } from '../../services/noticias'
+import { noticias } from '../../data/noticias'
 import './Home.css'
 
 function Home() {
-  const [ noticias, setNoticias ] = useState([])
+  // const [ noticias, setNoticias ] = useState([])
   const [ carregando, setCarregando ] = useState(true)
   const [ erro, setErro ] = useState('') 
 
