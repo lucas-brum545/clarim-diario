@@ -6,11 +6,14 @@ import Home from '../pages/Home/Home'
 import Materia from '../pages/Materia/Materia'
 import Cadastro from '../pages/Cadastro/Cadastro'
 import Login from '../pages/Login/Login'
+import NewsCard from '../components/NewsCard/NewsCard'
 import './App.css'
 import Painel from '../pages/Painel/Painel'
 import RotaProtegida from '../components/RotaProtegida'
+import { noticias } from '../data/noticias'
 
 function App() {
+  const [manchete, ...demais] = noticias
   const [ tema, setTema ] = useState(() => {
     const salvo = localStorage.getItem('tema') || 'light'
     if(salvo) return salvo
@@ -33,8 +36,30 @@ function App() {
     
   return (
     <>
+    <Header/>
+    <main className='container'>
+      <section className='manchete'>
+        <NewsCard
+          categoria = {manchete.categoria}
+          titulo = {manchete.titulo}
+          resumo = {manchete.resumo}
+
+        />
+      </section>
+      <section class="grade">
+        {demais.map((noticia) =>
+          <NewsCard
+          key = {noticia.id}
+          categoria = {noticia.categoria}
+          titulo = {noticia.titulo}
+          resumo = {noticia.resumo}
+          />
+        )}
+      </section>
+    </main>
     
-      <Header tema={tema} aoAlternarTema={alterarTema} /> {/* prop drilling */}
+      {/* prop drilling */}
+      {/* <Header tema={tema} aoAlternarTema={alterarTema} /> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/materia/:id" element={<Materia />} />
@@ -46,7 +71,7 @@ function App() {
           </RotaProtegida>
         }></Route>
       </Routes>
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
